@@ -30,7 +30,7 @@ def make(robot="IIWA", obj="milk", obstacle=None, task="PickPlace", controller="
     assert obj in AVAILABLE_OBJECTS
     assert task in AVAILABLE_TASKS
 
-    if obstacle == "none":
+    if obstacle == "None":
         obstacle = None
 
     # defined options to create robosuite environment
