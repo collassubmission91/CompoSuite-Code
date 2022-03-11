@@ -121,7 +121,7 @@ def run_test(base_path, save_path, load_dir, learner='MTL', wrong_task_id=-1, ta
 
     logger_kwargs = setup_logger_kwargs(str(task) + '&' + str(wrong_task_id),
                                         data_dir=os.path.join(
-                                            'spinningup_training/task_similarity_2',
+                                            'spinningup_training/task_similarity',
                                         save_path))
     logger = EpochLogger(**logger_kwargs)
 
@@ -170,12 +170,12 @@ def main():
     indices = np.unravel_index(args.array_id, (3, 256))
 
     directories = [
-        ["comp_experiments/256_tasks_rs_s0/", "MTL_56/"],
-        ["comp_experiments/256_tasks_rs_s1/", "MTL_56/"],
-        ["comp_experiments/256_tasks_rs_s2/", "MTL_56/"],
-        ["mtl_experiments/56_tasks_rs_s0/", "MTL_56/"],
-        ["mtl_experiments/56_tasks_rs_s1/", "MTL_56/"],
-        ["mtl_experiments/56_tasks_rs_s2/", "MTL_56/"],
+        ["comp_experiments/s0/", "MTL_56/"],
+        ["comp_experiments/s1/", "MTL_56/"],
+        ["comp_experiments/s2/", "MTL_56/"],
+        ["mtl_experiments/s0/", "MTL_56/"],
+        ["mtl_experiments/s1/", "MTL_56/"],
+        ["mtl_experiments/s2/", "MTL_56/"],
     ]
     learner_types = [
         'Comp', 'Comp', 'Comp',
